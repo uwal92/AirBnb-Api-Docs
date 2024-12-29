@@ -4,7 +4,7 @@
 
 ![airbnb-database-schema]
 
-![Database Schema](../images/airbnb_database_schema_diagram.png)
+![Database Schema](images/airbnb_database_schema_diagram.png)
 
 
 ## API Documentation
