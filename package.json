@@ -1,0 +1,19 @@
+{
+  "name": "airbnb-backend-project",
+  "version": "1.0.0",
+  "description": "First, you need to setup the backend of your application. This includes installing dependencies, setting up Sequelize, initializing your Express application, connecting Express security middlewares, and testing your server setup.",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm --prefix backend install backend",
+    "dev:backend": "npm install --prefix backend start",
+    "sequelize": "npm run --prefix backend sequelize",
+    "sequelize-cli": "npm run --prefix backend sequelize-cli",
+    "start": "npm start --prefix backend",
+    "build": "npm run --prefix backend build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
