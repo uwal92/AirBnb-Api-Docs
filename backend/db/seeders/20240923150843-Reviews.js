@@ -210,7 +210,7 @@ module.exports = {
     options.tableName = 'Reviews';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(
-      "options", // if there is a problem with reviews down replace this with option.
+      options, // if there is a problem with reviews down replace this with option.
       {
         review: {
           [Op.in]: [
