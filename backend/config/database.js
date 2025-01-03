@@ -10,7 +10,7 @@ module.exports = {
     dialect: "mysql",
   },
   production: {
-    use_env_variable: "DATABASE_URL", // Use the environment variable
+    use_env_variable: "DATABASE_URL", 
     dialect: "mysql",
   },
 //   production: {

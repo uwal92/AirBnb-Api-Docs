@@ -7,6 +7,20 @@ const process = require("process");
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + "/../../config/database.js")[env];
+
+
+
+// Add debug logs here:
+console.log("Environment:", env);
+console.log("Config Loaded:", config);
+
+if (!config) {
+  throw new Error(`Configuration for environment "${env}" not found.`);
+}
+
+
+
+
 const db = {};
 
 let sequelize;
