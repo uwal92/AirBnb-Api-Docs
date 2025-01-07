@@ -7,6 +7,12 @@
 ![Database Schema](images/airbnb_database_schema_diagram.png)
 
 
+## Live URL
+The backend is deployed on Render. You can access the API using the following link:
+
+**Render Live Link:** [https://airbnb-api-docs.onrender.com]
+
+
 ## API Documentation
 
 ## USER AUTHENTICATION/AUTHORIZATION
