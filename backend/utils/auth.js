@@ -5,6 +5,14 @@ const { User } = require("../db/models");
 
 const { secret, expiresIn } = jwtConfig;
 
+//adding csrf
+const csrf = require('csurf');
+const csrfProtection = csrf({ cookie: true });
+const restoreCSRF = (req, res, next) => {
+  res.cookie('XSRF-TOKEN', req.csrfToken());
+  next();
+};
+
 // backend/utils/auth.js
 
 // Sends a JWT Cookie
@@ -78,4 +86,4 @@ const requireAuth = function (req, _res, next) {
 };
 
 // backend/utils/auth.js
-module.exports = { setTokenCookie, restoreUser, requireAuth };
+module.exports = { setTokenCookie, restoreUser, requireAuth, csrfProtection, restoreCSRF };
