@@ -7,9 +7,9 @@ const csurf = require("csurf");
 const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 
-// add CSRF
-const { restoreCSRF } = require('./utils/auth');
-app.use(restoreCSRF);  // Adds /csrf/restore endpoint
+// // add CSRF
+// const { restoreCSRF } = require('./utils/auth');
+// app.use(restoreCSRF);  // Adds /csrf/restore endpoint
 
 // Create a variable called isProduction that will be true if
 // the environment is in production or not by checking the
