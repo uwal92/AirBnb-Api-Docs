@@ -86,4 +86,4 @@ const requireAuth = function (req, _res, next) {
 };
 
 // backend/utils/auth.js
-module.exports = { setTokenCookie, restoreUser, requireAuth, csrfProtection, restoreCSRF };
+module.exports = { setTokenCookie, restoreUser, requireAuth, };
