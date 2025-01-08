@@ -62,4 +62,16 @@ router.post("/test", (req, res) => {
   res.json({ requestBody: req.body });
 });
 
+
+//Add a XSRF-TOKEN cookie in development
+if (process.env.NODE_ENV !== "production") {
+  router.get("/csrf/restore", (req, res) => {
+    const csrfToken = req.csrfToken();
+    res.cookie("XSRF-TOKEN", csrfToken);
+    res.status(200).json({
+      "XSRF-Token": csrfToken,
+    });
+  });
+}
+
 module.exports = router;
