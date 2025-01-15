@@ -35,11 +35,6 @@ check('lastName')
     handleValidationErrors
   ];
 
-
-
-
-
-
 // Sign up
 // Sign up
 router.post(
