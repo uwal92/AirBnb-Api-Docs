@@ -75,6 +75,7 @@ module.exports = {
   }, 
   async down(queryInterface, Sequelize) {
     options.tableName = 'Spots';
+    await queryInterface.removeConstraint("AirBnb-Api-Docs.Bookings", "Bookings_spotId_fkey")
     return queryInterface.dropTable(options);
   }
 };
