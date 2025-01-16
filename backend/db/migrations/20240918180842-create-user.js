@@ -55,7 +55,7 @@ module.exports = {
 
     async down(queryInterface, Sequelize) {
         options.tableName = 'Users';
-       await queryInterface.removeConstraint("app_academy_project.Bookings", "Bookings_userId_fkey")
+       //await queryInterface.removeConstraint("app_academy_project.Bookings", "Bookings_userId_fkey")
         return queryInterface.dropTable(options);
     },
 };
