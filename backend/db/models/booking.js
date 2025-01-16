@@ -42,12 +42,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         isDate: true,
-        // isFuture(value) {
-        //   if (new Date(value) <= new Date()) {
-        //     throw new Error('Start date must be in the future.');
-        //   }
-        // }
-        isAfter: new Date()
+        isFuture(value) {
+          if (new Date(value) <= new Date()) {
+            throw new Error('Start date must be in the future.');
+          }
+        }
       }
     },
     endDate: {
@@ -55,11 +54,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true, 
       validate: {
         isDate: true,
-        // isAfterStartDate(value) {
-        //   if (new Date(value) <= new Date(this.startDate)) {
-        //     throw new Error('End date must be after start date.');
-        //   }
-        // }
+        isAfterStartDate(value) {
+          if (new Date(value) <= new Date(this.startDate)) {
+            throw new Error('End date must be after start date.');
+          }
+        }
       }
     },
   }, {
