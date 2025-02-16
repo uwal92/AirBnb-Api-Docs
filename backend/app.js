@@ -51,7 +51,11 @@ if (!isProduction) {
   // enable cors only in development
   app.use(cors());
 }
-
+app.use(cors({
+  origin: ["https://airbnb-fe-8288.onrender.com"], 
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 // helmet helps set a variety of headers to better secure your app
 app.use(
   helmet.crossOriginResourcePolicy({
