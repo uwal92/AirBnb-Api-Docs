@@ -67,7 +67,12 @@ router.post("/test", (req, res) => {
 
   router.get("/csrf/restore", (req, res) => {
     const csrfToken = req.csrfToken();
-    res.cookie("XSRF-TOKEN", csrfToken);
+    res.cookie("XSRF-TOKEN", token, {
+      httpOnly: false,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: 'None',
+      domain: process.env.NODE_ENV === "production" ? "https://airbnb-api-docs.onrender.com" : undefined
+    });
     res.status(200).json({
       "XSRF-Token": csrfToken,
     });
