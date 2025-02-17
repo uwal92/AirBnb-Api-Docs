@@ -52,7 +52,7 @@ if (!isProduction) {
   app.use(cors());
 }
 app.use(cors({
-  origin: ["https://airbnb-api-docs.onrender.com"], 
+  origin: ["https://airbnb-fe-8288.onrender.com"], 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
