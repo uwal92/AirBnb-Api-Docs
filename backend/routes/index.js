@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
     console.log("Generated CSRF Token:", token);
     res.cookie("XSRF-TOKEN", token, {
       httpOnly: false,
-      secure: process.env.NODE_ENV === "production",
+      secure: false,
       sameSite: 'None'
     });
     res.sendFile(path.resolve(__dirname, "../../frontend", "dist", "index.html"));
