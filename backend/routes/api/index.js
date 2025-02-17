@@ -66,8 +66,10 @@ router.post("/test", (req, res) => {
 //Add a XSRF-TOKEN cookie in development
 
   router.get("/csrf/restore", (req, res) => {
+ 
     const csrfToken = req.csrfToken();
-    res.cookie("XSRF-TOKEN", token, {
+    console.log("Generated CSRF Token from api index:", csrfToken);
+    res.cookie("XSRF-TOKEN", csrfToken, {
       httpOnly: false,
       secure: process.env.NODE_ENV === "production",
       sameSite: 'None',
