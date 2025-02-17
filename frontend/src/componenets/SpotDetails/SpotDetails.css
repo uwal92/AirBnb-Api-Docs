@@ -1,0 +1,176 @@
+@import url('../../index.css');
+
+/* .spot-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+	margin-left: 10px;
+	margin-right: 10px;
+} */
+
+.spot-details-title {
+    font-size: var(--fs-medium);
+    font-weight: bold;
+	padding-top: 5px;
+	display: flex;
+	font-size: larger;
+}
+
+.spot-details-info {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.spot-details-owner-description {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+
+.spot-owner {
+	font-size: larger;
+    text-align: left;
+	padding-bottom: 5px;
+}
+
+.city-state {
+    text-align: left;
+}
+.booking-spot-div {
+	display: flex;
+	width: 25dvw;
+	flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	/* background-color: white; */
+	border: solid 2px black;
+	border-radius: 14px;
+	gap: 1rem;
+	padding: 1rem 2rem;
+	margin-right: 10px;
+}
+
+.price-review-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.book-price {
+	font-weight: bold;
+    font-size: x-large;
+}
+
+.booking-button {
+	padding: 0.5rem 4rem;
+	/* background-color: white; */
+	color: white;
+	/* box-shadow: 4px 2px 10px grey; */
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+.line-break {
+	border: solid 2px black;
+	width: 100%;
+}
+
+.review-word {
+	padding-bottom: 10px;
+}
+
+.review-div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+
+.review-title {
+	font-size: x-large;
+    text-align: left;
+}
+
+.review-user {
+	padding-bottom: 5px;
+	text-decoration: underline;
+	text-shadow: 2px 2px 5px grey;
+}
+
+.review-date {
+	padding-bottom: 5px;
+}
+
+.review-text {
+	padding-bottom: 5px;
+}
+
+.delete-review-button {
+	padding: 0.5rem 4rem;
+	background-color: white;
+	color: black;
+	box-shadow: 4px 2px 10px grey;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+.add-review-button {
+	padding: 0.5rem 4rem;
+	background-color: white;
+	color: black;
+	box-shadow: 4px 2px 10px grey;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+.post-review {
+	padding-bottom: 15px;
+	background-color: white;
+	color: black;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+
+.spot-images-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 0px;
+  }
+  
+  .main-image {
+    flex: 1;
+  }
+  
+  .spot-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .image-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+  
+  .spot-image {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .spot-image-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

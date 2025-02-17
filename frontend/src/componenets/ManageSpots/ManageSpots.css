@@ -1,0 +1,124 @@
+@import url('../../index.css');
+
+#root {
+    margin: 0px !important;
+}
+.manage-spot-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    margin: 0px !important;
+  }
+  
+  .manage-spot-heading {
+    padding-left: 5px;
+    color: black;
+  }
+  .no-spots {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    gap: 1rem;
+    padding-left: 2.5rem;
+  }
+  
+  .manage-spot-title {
+    margin-bottom: 0.5rem;
+    font-size: 30px;
+    text-align: left;
+  }
+  
+  .create-newspot-btn {
+    border: 2px solid var(--deepSpaceAccent-clr);
+    border-radius: 18px;
+    padding: 0.3rem 1rem;
+    font-family: var(--ff-headers);
+    background-color: var(--lightSpaceAccent-clr);
+    transition: all 0.5s ease;
+  }
+  
+  .create-newspot-btn:hover {
+    box-shadow: 2px 2px 10px var(--deepSpaceAccent-clr),
+      -2px -2px 10px var(--deepSpaceAccent-clr);
+    background-color: var(--white-clr);
+  }
+  
+  .manage-spot-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: auto;
+      gap: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%; /* Ensure the grid stretches to fit the container */
+      max-width: 1200px; /* Optional: Set a max width if needed */
+      box-sizing: border-box;
+    }
+  
+  .mspot-tile {
+    position: relative;
+    width: 300px;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .manage-spot-thumbnail {
+    width: 300px;
+    border-radius: 14px;
+    height: 250px; /* Set a fixed height */
+    background-color: white; /* Adds white padding around smaller images */
+  }
+  
+  .manage-spot-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .manage-spot-info-sub {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .manage-spot-location {
+    font-weight: 300;
+    font-weight: bold;
+    margin-top: 5px;
+    color: black;
+  }
+  
+  .manage-spot-price {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .manage-spot-actions {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    gap: 1rem; /* Adjusted to give a smaller gap between the buttons */
+}
+  
+  .manage-spot-use-btn {
+    padding: 0.3rem 1.5rem;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem; /* Reduced font size for a smaller button appearance */
+    width: auto; /* Adjust width based on content */
+    display: inline-block; /* Ensure buttons sit next to each other */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.manage-spot-use-btn:hover {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+.manage-spot-rating {
+    display: flex;
+    flex-direction: row;
+    color: black;
+}

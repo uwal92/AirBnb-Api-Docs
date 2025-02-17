@@ -1,0 +1,57 @@
+@import url('../../index.css');
+
+.create-spot-form {
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: left;
+  }
+  
+  .create-spot-form fieldset {
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  .create-spot-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .create-spot-form input,
+  .create-spot-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .create-spot-form .location-row {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .submit-button {
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    font-weight: bold;
+    text-align: left;
+  }
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
