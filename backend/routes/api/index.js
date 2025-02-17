@@ -71,9 +71,9 @@ router.post("/test", (req, res) => {
     console.log("Generated CSRF Token from api index:", csrfToken);
     res.cookie("XSRF-TOKEN", csrfToken, {
       httpOnly: false,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: 'None',
-      domain: process.env.NODE_ENV === "production" ? "https://airbnb-api-docs.onrender.com" : undefined
+      secure: false,  //process.env.NODE_ENV === "production",
+      sameSite: 'None'//,
+      //domain: process.env.NODE_ENV === "production" ? "https://airbnb-api-docs.onrender.com" : undefined
     });
     res.status(200).json({
       "XSRF-Token": csrfToken,
