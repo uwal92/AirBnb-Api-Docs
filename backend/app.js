@@ -68,7 +68,7 @@ app.use(
   csurf({
     cookie: {
       secure: isProduction,
-      sameSite: 'None', //isProduction && "Lax",
+      sameSite: "None", //isProduction && "Lax",
       httpOnly: false,
       path: "/",
       domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
