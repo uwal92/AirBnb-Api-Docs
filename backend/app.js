@@ -47,10 +47,10 @@ app.use(express.json());
 // render in deployment.
 // 3. Add the csurf middleware and configure it to use cookies.
 // Security Middleware
-if (!isProduction) {
-  // enable cors only in development
-  app.use(cors());
-}
+// if (!isProduction) {
+//   // enable cors only in development
+//   app.use(cors());
+// }
 app.use(cors({
   origin: ["https://airbnb-fe-8288.onrender.com"], 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -59,7 +59,7 @@ app.use(cors({
 // helmet helps set a variety of headers to better secure your app
 app.use(
   helmet.crossOriginResourcePolicy({
-    policy: "cross-origin",
+    policy: "cross-origin",    
   })
 );
 
@@ -69,7 +69,7 @@ app.use(
     cookie: {
       secure: isProduction,
       sameSite: isProduction && "Lax",
-      httpOnly: true,
+      httpOnly: false,
     },
   })
 );
