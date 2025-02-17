@@ -7,7 +7,7 @@ router.use("/api", apiRouter);
 
 // Static routes
 // Serve React build files in production
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || 1==1) {
   const path = require("path");
   // Serve the frontend's index.html file at the root route
   // router.get("/", (req, res) => {
@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
     console.log("Generated CSRF Token:", token);
     res.cookie("XSRF-TOKEN", token, {
       httpOnly: false,
-      secure: false,
+      secure: false, //process.env.NODE_ENV === "production",
       sameSite: 'None'
     });
     res.sendFile(path.resolve(__dirname, "../../frontend", "dist", "index.html"));
