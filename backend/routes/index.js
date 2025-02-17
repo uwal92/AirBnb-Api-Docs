@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === "production" || 1==1) {
 
     res.cookie("XSRF-TOKEN", token, {
       httpOnly: false,
+      path: "/",
       secure: process.env.NODE_ENV === "production",
       sameSite: 'None',
       domain: process.env.NODE_ENV === "production" ? "airbnb-api-docs.onrender.com" : undefined
