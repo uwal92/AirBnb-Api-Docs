@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production" || 1==1) {
     res.cookie("XSRF-TOKEN", token, {
       httpOnly: false,
       path: "/",
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       sameSite: 'None',
       domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
     });
