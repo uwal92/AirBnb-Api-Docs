@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === "production" || 1==1) {
       sameSite: 'None',
       domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
     });
-    res.sendFile(path.resolve(__dirname, "../../frontend", "dist", "index.html"));
+    // res.sendFile(path.resolve(__dirname, "../../frontend", "dist", "index.html"));
   });
   console.log("path: ", path);
   // Serve the static assets in the frontend's build folder
