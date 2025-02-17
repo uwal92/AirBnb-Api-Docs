@@ -68,10 +68,10 @@ app.use(
   csurf({
     cookie: {
       secure: isProduction,
-      sameSite: isProduction && "Lax",
+      sameSite: 'None', //isProduction && "Lax",
       httpOnly: false,
       path: "/",
-      domain: process.env.NODE_ENV === "production" ? "airbnb-api-docs.onrender.com" : undefined
+      domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
     },
   })
 );

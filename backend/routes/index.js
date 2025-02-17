@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === "production" || 1==1) {
       path: "/",
       secure: process.env.NODE_ENV === "production",
       sameSite: 'None',
-      domain: process.env.NODE_ENV === "production" ? "airbnb-api-docs.onrender.com" : undefined
+      domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
     });
     res.sendFile(path.resolve(__dirname, "../../frontend", "dist", "index.html"));
   });
