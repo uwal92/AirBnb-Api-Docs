@@ -19,9 +19,11 @@ if (process.env.NODE_ENV === "production" || 1==1) {
   router.get("/", (req, res) => {
     const token = req.csrfToken();
     console.log("Generated CSRF Token:", token);
+    console.log("-- process.env.NODE_ENV --", process.env.NODE_ENV);
+
     res.cookie("XSRF-TOKEN", token, {
       httpOnly: false,
-      secure: false, //process.env.NODE_ENV === "production",
+      secure: process.env.NODE_ENV === "production",
       sameSite: 'None',
       domain: process.env.NODE_ENV === "production" ? "https://airbnb-api-docs.onrender.com" : undefined
     });
