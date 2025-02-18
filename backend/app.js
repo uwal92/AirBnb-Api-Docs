@@ -70,8 +70,8 @@ app.use(
       secure: true,
       sameSite: isProduction && "Lax",
       httpOnly: false,
-      path: "/",
-      domain: isProduction ? "airbnb-fe-8288.onrender.com" : undefined
+      // path: "/",
+      // domain: isProduction ? "airbnb-fe-8288.onrender.com" : undefined
     },
   })
 );
