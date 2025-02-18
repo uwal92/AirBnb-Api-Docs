@@ -73,7 +73,7 @@ router.post("/test", (req, res) => {
       httpOnly: false,
       path: "/",
       secure: false,
-      //sameSite: 'None'//,
+      sameSite: 'None'//,
       //domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
     });
     res.status(200).json({
