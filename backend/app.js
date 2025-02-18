@@ -70,8 +70,8 @@ app.use(
       secure: true,
       sameSite: isProduction && "Lax",
       httpOnly: false,
-      // path: "/",
-      domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
+      path: "/",
+      domain: isProduction ? ".onrender.com" : undefined
     },
   })
 );
