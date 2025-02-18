@@ -71,7 +71,7 @@ app.use(
       sameSite: isProduction && "Lax",
       httpOnly: false,
       // path: "/",
-      // domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
+      domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
     },
   })
 );
