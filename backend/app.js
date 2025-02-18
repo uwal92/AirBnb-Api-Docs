@@ -68,7 +68,7 @@ app.use(
   csurf({
     cookie: {
       secure: true,
-      sameSite: isProduction && "Lax",
+      sameSite: isProduction && "None",
       httpOnly: false,
       // path: "/",
       // domain: isProduction ? "airbnb-fe-8288.onrender.com" : undefined
