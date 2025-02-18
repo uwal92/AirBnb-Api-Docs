@@ -17,18 +17,18 @@ if (process.env.NODE_ENV === "production" || 1==1) {
   //   );
   // });
   router.get("/", (req, res) => {
-    // const token = req.csrfToken();
-    // console.log("Generated CSRF Token:", token);
+    const token = req.csrfToken();
+    console.log("Generated CSRF Token:", token);
     console.log("-- process.env.NODE_ENV --", process.env.NODE_ENV);
 
-    // res.cookie("XSRF-TOKEN", token, {
-    //   httpOnly: false,
-    //   path: "/",
-    //   secure: true,
-    //   sameSite: 'None',
-    //   domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
-    // });
-    // res.sendFile(path.resolve(__dirname, "../../frontend", "dist", "index.html"));
+    res.cookie("XSRF-TOKEN", token, {
+      httpOnly: false,
+      path: "/",
+      secure: true,
+      sameSite: 'None',
+      domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
+    });
+    res.sendFile(path.resolve(__dirname, "../../frontend", "dist", "index.html"));
   });
   console.log("path: ", path);
   // Serve the static assets in the frontend's build folder

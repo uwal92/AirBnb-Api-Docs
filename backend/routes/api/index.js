@@ -67,17 +67,17 @@ router.post("/test", (req, res) => {
 
   router.get("/csrf/restore", (req, res) => {
  
-    // const csrfToken = req.csrfToken();
-    // console.log("Generated CSRF Token from api index:", csrfToken);
-    // res.cookie("XSRF-TOKEN", csrfToken, {
-    //   httpOnly: false,
-    //   path: "/",
-    //   secure: true,
-    //   sameSite: 'None'//,
-    //   //domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
-    // });
+    const csrfToken = req.csrfToken();
+    console.log("Generated CSRF Token from api index:", csrfToken);
+    res.cookie("XSRF-TOKEN", csrfToken, {
+      httpOnly: false,
+      path: "/",
+      secure: false,
+      sameSite: 'None'//,
+      //domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
+    });
     res.status(200).json({
-      "XSRF-Token": ''//csrfToken,
+      "XSRF-Token": csrfToken,
     });
   });
 
