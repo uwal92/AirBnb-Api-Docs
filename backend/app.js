@@ -71,7 +71,7 @@ app.use(
       sameSite: isProduction && "Lax",
       httpOnly: false,
       path: "/",
-      domain: isProduction ? ".onrender.com" : undefined
+      domain: isProduction ? "airbnb-fe-8288.onrender.com" : undefined
     },
   })
 );
