@@ -72,8 +72,8 @@ router.post("/test", (req, res) => {
     res.cookie("XSRF-TOKEN", csrfToken, {
       httpOnly: false,
       path: "/",
-      secure: true,
-      sameSite: 'None'//,
+      secure: false,
+      //sameSite: 'None'//,
       //domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
     });
     res.status(200).json({
